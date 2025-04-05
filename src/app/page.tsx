@@ -1,6 +1,5 @@
 import { type Metadata } from "next";
 
-import { asText } from "@prismicio/client";
 import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
