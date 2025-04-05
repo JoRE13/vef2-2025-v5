@@ -41,9 +41,7 @@ export async function generateStaticParams() {
   const client = createClient();
 
   // Get all pages from Prismic, except the homepage.
-  const pages = await client.getAllByType("news", {
-    filters: [filter.not("my.page.uid", "home")],
-  });
+  const pages = await client.getAllByType("news");
 
   return pages.map((page) => ({ uid: page.uid }));
 }
